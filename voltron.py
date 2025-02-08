@@ -15,4 +15,5 @@ password = input(" you can put in a similar one for us to analyze instead.\n")
 print(password)
 
 def help():
-    pass
+    print("Voltron is a command-line utility to analyze the strength of your password.")
+    print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
