@@ -14,5 +14,5 @@ print("Please enter your password.  We won't save it, but if you are justifiably
 password = input(" you can put in a similar one for us to analyze instead.")
 print(password)
 
-def help:
+def help():
     pass
