@@ -10,6 +10,9 @@ Psuedocode/brainstorming:
 
 
 print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
+
+proceed = input("Would you like to check your password now (Y/N)?"\n)
+
 print("Please enter your password.  We won't save it, but if you are justifiably paranoid,")
 password = input(" you can put in a similar one for us to analyze instead.\n")
 print(password)
