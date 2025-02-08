@@ -11,7 +11,7 @@ Psuedocode/brainstorming:
 
 print("Welcome to Voltron, the password analyzer.  How strong is your password?")
 print("Please enter your password.  We won't save it, but if you are justifiably paranoid,")
-password = input(" you can put in a similar one for us to analyze instead.")
+password = input(" you can put in a similar one for us to analyze instead.\n")
 print(password)
 
 def help():
