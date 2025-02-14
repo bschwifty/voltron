@@ -1,3 +1,5 @@
+import math
+
 """
 Psuedocode/brainstorming:
 - give user an intro blurb
