@@ -18,7 +18,7 @@ def analysis():
     print("Please enter your password.  We won't save it, but if you are justifiably paranoid,")
     password = input(" you can put in a similar one for us to analyze instead.\n")
     print(password)
-    if len(password) > 16:
+    if len(password) < 16:
         print("Your password is shorter than 16 characters long, consider making it longer.")
 
 print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
