@@ -16,8 +16,7 @@ def help():
 
 def analysis():
     print("Please enter your password.  We won't save it, but if you are justifiably paranoid,")
-    password = input(" you can put in a similar one for us to analyze instead.\n")
-    #TODO make a way for it not to show in the terminal as they type
+    password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
     print(password) # debug only, remove this after testing
     if len(password) < 16:
         print("Your password is shorter than 16 characters long, consider making it longer.")
