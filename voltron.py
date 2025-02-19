@@ -1,7 +1,7 @@
 import math
+import pwinput
 
 """
-Psuedocode/brainstorming:
 - give user an intro blurb
 - take current pw
 - measure:
