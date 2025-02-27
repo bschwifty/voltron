@@ -2,8 +2,6 @@ import math
 import pwinput
 
 """
-- give user an intro blurb
-- take current pw
 - measure:
     - length
     - charset
