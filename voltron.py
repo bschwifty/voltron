@@ -24,7 +24,7 @@ print("Welcome to Voltron, the password helper-outer.  How strong is your passwo
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
 if proceed == "N":
-    print("No problem, have a nice day.")
+    print("No problem, have a nice day.  : )")
     exit()
 
 if proceed == "Y":
