@@ -22,6 +22,8 @@ def analysis():
     elif len(password) >= 16 and len(password) < 25:
         print("Your password is between 16 and 25 characters long.  Nice work!  However,\n")
         print("you may be able to make it longer by using a passphrase.")
+    else:
+        print("Your password is more than 25 characters long.  Good to go!")
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
