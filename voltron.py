@@ -7,6 +7,7 @@ import pwinput
     - charset
     - check against breach database..? maybe shortened version of rockyou, top 100k or such?
 """
+print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
 
 def help():
     print("Voltron is a command-line utility to analyze the strength of your password.")
@@ -19,7 +20,6 @@ def analysis():
     if len(password) < 16:
         print("Your password is shorter than 16 characters long, consider making it longer.")
 
-print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
