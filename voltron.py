@@ -14,7 +14,7 @@ def help():
     print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
 
 def analysis():
-    print("Please enter your password.  We won't save it, but if you are justifiably paranoid,")
+    print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
     password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
     print(password) # debug only, remove this after testing
     # XKCD check:
