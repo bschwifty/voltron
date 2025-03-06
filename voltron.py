@@ -12,7 +12,7 @@ def help():
     print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
 
 def analysis_len():
-
+    # XKCD check:
     if password == "correcthorsebatterystaple":
         print("That's an excellent password, but everyone else has read XKCD too...")
     # Length checks:
@@ -37,5 +37,4 @@ if proceed == "Y":
     print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
     password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
     print(password) # debug only, remove this after testing
-    # XKCD check:
     analysis_len()
