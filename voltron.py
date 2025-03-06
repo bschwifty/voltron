@@ -12,10 +12,7 @@ def help():
     print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
 
 def analysis_len():
-    print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
-    password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-    print(password) # debug only, remove this after testing
-    # XKCD check:
+
     if password == "correcthorsebatterystaple":
         print("That's an excellent password, but everyone else has read XKCD too...")
     # Length checks:
@@ -27,6 +24,9 @@ def analysis_len():
     else:
         print("Your password is more than 25 characters long.  Good to go!")
 
+def analysis_charset():
+
+
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
 if proceed == "N":
@@ -34,4 +34,8 @@ if proceed == "N":
     exit()
 
 if proceed == "Y":
+    print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
+    password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
+    print(password) # debug only, remove this after testing
+    # XKCD check:
     analysis_len()
