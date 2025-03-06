@@ -25,6 +25,7 @@ def analysis_len():
         print("Your password is more than 25 characters long.  Good to go!")
 
 def analysis_charset():
+    #TODO charset analysis goes here
     pass
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
@@ -36,5 +37,5 @@ if proceed == "N":
 if proceed == "Y":
     print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
     password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-    print(password) # debug only, remove this after testing
+    print(password) # uncomment for debug only, remove this after testing
     analysis_len()
