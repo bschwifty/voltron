@@ -11,7 +11,7 @@ def help():
     print("Voltron is a command-line utility to analyze the strength of your password.")
     print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
 
-def analysis():
+def analysis_len():
     print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
     password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
     print(password) # debug only, remove this after testing
@@ -34,4 +34,4 @@ if proceed == "N":
     exit()
 
 if proceed == "Y":
-    analysis()
+    analysis_len()
