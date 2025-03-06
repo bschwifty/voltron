@@ -26,7 +26,7 @@ def analysis_len():
         print("Your password is more than 25 characters long.  Good to go!")
 
 def analysis_charset():
-    #TODO charset analysis goes here
+    #TODO charset analysis goes here - try using isalpha() from string
     pass
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
