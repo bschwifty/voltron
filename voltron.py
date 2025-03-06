@@ -25,12 +25,12 @@ def analysis_len():
         print("Your password is more than 25 characters long.  Good to go!")
 
 def analysis_charset():
-
+    pass
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
 if proceed == "N":
-    print("No problem, have a nice day.  : )")
+    print("No problem, have a nice day : )")
     exit()
 
 if proceed == "Y":
