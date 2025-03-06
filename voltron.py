@@ -1,4 +1,3 @@
-import math
 import pwinput
 
 """
@@ -36,4 +35,3 @@ if proceed == "N":
 
 if proceed == "Y":
     analysis()
-
