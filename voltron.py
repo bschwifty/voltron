@@ -16,6 +16,7 @@ def analysis_len():
     # XKCD check:
     if password == "correcthorsebatterystaple":
         print("That's an excellent password, but everyone else has read XKCD too...")
+        exit()
     # Length checks:
     if len(password) < 16:
         print("Your password is shorter than 16 characters long, consider making it longer.")
