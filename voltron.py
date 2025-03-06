@@ -3,7 +3,6 @@ import pwinput
 
 """
 - measure:
-    - length
     - charset
     - check against breach database..? maybe shortened version of rockyou, top 100k or such?
 """
