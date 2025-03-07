@@ -29,6 +29,7 @@ def analysis_charset():
     #TODO charset analysis goes here - try using isalpha() from string
     # https://www.geeksforgeeks.org/python-string-isalpha-method/?ref=ml_lbp
     # https://pythonskills.org/topics/string-character-analysis
+    score = 0 # increment this with each type of char..?
     pass
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
