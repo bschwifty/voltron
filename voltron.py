@@ -1,5 +1,4 @@
 import pwinput
-import string
 
 """
 - analyze:
