@@ -7,7 +7,7 @@ Personal Python Project to Learn and Demonstrate New Skills
 
 Initial thoughts - this will be a password strength checker
 - takes input
-- doesn't save it it record it anywhere (yikes)
+- doesn't save it or record it anywhere (yikes)
 - graphical display (on a webpage maybe?) of how strong the password is
 - displays relevant tips/links
 - GIF demo?
