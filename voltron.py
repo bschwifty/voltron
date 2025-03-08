@@ -30,7 +30,12 @@ def analysis_charset():
     # https://www.geeksforgeeks.org/python-string-isalpha-method/?ref=ml_lbp
     # https://pythonskills.org/topics/string-character-analysis
     score = 0 # increment this with each type of char..?
-    pass
+    all_letters = password.isalpha()
+    if all_letters == True:
+        score = 1
+    all_numbers = password.isdigit()
+    if all_numbers == True:
+        score = 1
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
