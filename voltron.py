@@ -35,6 +35,8 @@ def analysis_charset():
     all_numbers = password.isdigit()
     if all_numbers == True:
         score = 1
+    if score == 1:
+        print("Your password is all one kind of character.  Mix it up a bit for better security.")
 
 proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
