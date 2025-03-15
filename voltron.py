@@ -28,7 +28,7 @@ def analysis_charset():
     #TODO charset analysis goes here - try using isalpha() from string
     # https://www.geeksforgeeks.org/python-string-isalpha-method/?ref=ml_lbp
     # https://pythonskills.org/topics/string-character-analysis
-    score = 0 # increment this with each type of char..?
+    score = 0 # can increment with each class of character
     all_letters = password.isalpha()
     if all_letters == True:
         score = 1
