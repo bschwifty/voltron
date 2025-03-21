@@ -1,4 +1,5 @@
 import pwinput
+import string
 
 """
 - analyze:
@@ -29,10 +30,10 @@ def analysis_charset():
     # https://www.geeksforgeeks.org/python-string-isalpha-method/?ref=ml_lbp
     # https://pythonskills.org/topics/string-character-analysis
     char_score = 0 # can increment with each class of character
-    has_lower = any(c.islower() for c in pw)
-    has_upper = any(c.isupper() for c in pw)
-    has_numbers = any(c.isdigit() for c in pw)
-    has_special = any(c in string.punctuation for c in pw)
+    has_lower = any(c.islower() for c in password)
+    has_upper = any(c.isupper() for c in password)
+    has_numbers = any(c.isdigit() for c in password)
+    has_special = any(c in string.punctuation for c in password)
     print(has_lower)
 
 '''
@@ -57,3 +58,4 @@ if proceed == "Y":
     password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
     print(password) # uncomment for debug only, remove this after testing
     analysis_len()
+    analysis_charset()
