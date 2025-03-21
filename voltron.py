@@ -28,8 +28,13 @@ def analysis_charset():
     #TODO charset analysis goes here - try using isalpha() from string
     # https://www.geeksforgeeks.org/python-string-isalpha-method/?ref=ml_lbp
     # https://pythonskills.org/topics/string-character-analysis
-    score = 0 # can increment with each class of character
-    
+    char_score = 0 # can increment with each class of character
+    has_lower = any(c.islower() for c in pw)
+    has_upper = any(c.isupper() for c in pw)
+    has_numbers = any(c.isdigit() for c in pw)
+    has_special = any(c in string.punctuation for c in pw)
+    print(has_lower)
+
 '''
     'all_letters = password.isalpha()
     if all_letters == True:
