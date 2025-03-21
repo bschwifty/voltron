@@ -35,6 +35,8 @@ def analysis_charset():
     has_numbers = any(c.isdigit() for c in password)
     has_special = any(c in string.punctuation for c in password)
     print(has_lower)
+    # TODO add cumulative scoring here
+    # TODO add print stmts here to effect of "your pw uses x character types"
 
 '''
     'all_letters = password.isalpha()
