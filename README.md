@@ -1,6 +1,8 @@
 # voltron
 Personal Python Project to Learn and Demonstrate New Skills
 
+20250407 - Researching new ideas for character scoring
+
 20250320 - Work in progress, lots of work to go but getting there.
 
 20250204 - Initial commit, brainstorming project ideas.  Stay tuned.
