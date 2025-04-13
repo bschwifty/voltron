@@ -30,10 +30,10 @@ def analysis_charset():
     # https://www.geeksforgeeks.org/python-string-isalpha-method/?ref=ml_lbp
     # https://pythonskills.org/topics/string-character-analysis
     char_score = 0 # can increment with each class of character
-    has_lower = any(c.islower() for c in password)
-    has_upper = any(c.isupper() for c in password)
-    has_numbers = any(c.isdigit() for c in password)
-    has_special = any(c in string.punctuation for c in password)
+    has_lower = int(any(c.islower() for c in password))
+    has_upper = int(any(c.isupper() for c in password))
+    has_numbers = int(any(c.isdigit() for c in password))
+    has_special = int(any(c in string.punctuation for c in password))
     print(has_lower)
     print(has_upper)
     print(has_numbers)
