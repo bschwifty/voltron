@@ -66,3 +66,4 @@ if proceed == "Y":
     analysis_charset()
 
 # TODO: add error handling for if someone puts in something other than Y or N
+# TODO: take a look at NIST 800-63B and maybe reference it in help file
