@@ -67,7 +67,7 @@ while True:
         analysis_charset()
         break
 
-    # If the input is not valid, inform the user and prompt again
+    # Error handling for invalidd input:
     print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
 
 
