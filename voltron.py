@@ -52,18 +52,23 @@ def analysis_charset():
         print("Your password is all one kind of character.  Mix it up a bit for better security.")
 '''
 
-proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
+while True:
+    proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
-if proceed == "N":
-    print("No problem, have a nice day : )")
-    exit()
+    if proceed == "N":
+        print("No problem, have a nice day : )")
+        exit()
 
-if proceed == "Y":
-    print("\nPlease enter your password.  We won't save it, but if you are justifiably paranoid,")
-    password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-    print(password) # uncomment for debug only, remove this after testing
-    analysis_len()
-    analysis_charset()
+    if proceed == "Y":
+        print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
+        password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
+        print(password)  # uncomment for debug only, remove this after testing
+        analysis_len()
+        analysis_charset()
+        break
 
-# TODO: add error handling for if someone puts in something other than Y or N
+    # If the input is not valid, inform the user and prompt again
+    print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
+
+
 # TODO: take a look at NIST 800-63B and maybe reference it in help file
