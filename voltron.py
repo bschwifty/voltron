@@ -71,3 +71,4 @@ while True:
     print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
 
 # TODO: take a look at NIST 800-63B and maybe reference it in help file
+# link to use later: https://pages.nist.gov/800-63-3/sp800-63b.html
