@@ -54,8 +54,8 @@ def analysis_breach(password, filename='rockyou-top15k.txt'):
         print("Your password is not in the top 15,000 breached passwords.  Good selection!\n")
         return False
 
-if __name__ == "__main__":
-    while True:
+def main() -> None:
+        while True:
         proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
         if proceed == "N":
