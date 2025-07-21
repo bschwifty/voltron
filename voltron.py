@@ -31,6 +31,7 @@ def analysis_charset():
     has_upper = int(any(c.isupper() for c in password))
     has_numbers = int(any(c.isdigit() for c in password))
     has_special = int(any(c in string.punctuation for c in password))
+    # for debug, delete these before finalizing
     print(has_lower)
     print(has_upper)
     print(has_numbers)
