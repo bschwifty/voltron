@@ -54,30 +54,33 @@ def analysis_breach(password, filename='rockyou-top15k.txt'):
         print("Your password is not in the top 15,000 breached passwords.  Good selection!\n")
         return False
 
-def main() -> None:
-        while True:
-            proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
+def main():
+    while True:
+        proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
-            if proceed == "N":
-                print("No problem, have a nice day : )")
-                exit()
+        if proceed == "N":
+            print("No problem, have a nice day : )")
+            exit()
 
-            if proceed == "Y":
-                print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
-                password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-                print("\n ...Analyzing your password...\n")
-                time.sleep(1.5)
-                analysis_len(password)
-                time.sleep(1.5)
-                analysis_charset(password)
-                time.sleep(1.5)
-                analysis_breach(password)
-                time.sleep(1.5)
-                print("Thanks for using Voltron 💫\n"
-                "For more information about good password strategies, you can reference NIST Special \n"
-                "Publication 800-63B: https://pages.nist.gov/800-63-3/sp800-63b.html")
+        if proceed == "Y":
+            print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
+            password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
+            print("\n ...Analyzing your password...\n")
+            time.sleep(1.5)
+            analysis_len(password)
+            time.sleep(1.5)
+            analysis_charset(password)
+            time.sleep(1.5)
+            analysis_breach(password)
+            time.sleep(1.5)
+            print("Thanks for using Voltron 💫\n"
+            "For more information about good password strategies, you can reference NIST Special \n"
+            "Publication 800-63B: https://pages.nist.gov/800-63-3/sp800-63b.html")
 
-                break
+            break
 
         # Error handling for invalidd input:
         print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
+
+if __name__ == "__main__":
+    main()
