@@ -43,8 +43,24 @@ def analysis_charset():
     else:
         print("Nice job!\n")
 
-def analysis_breach():
-    pass
+def analysis_breach(password, filename='rockyou-top15k.txt'):
+    #try:
+    with open(filename, 'r', encoding='utf-8') as file:
+        passwords = set(line.strip() for line in file)
+    
+    if password in passwords:
+        print("Your password has been exposed in a breach! Please change it to another one.\n")
+        return True
+    else:
+        print("Your password is not in the top 15,000 breached passwords.  Good selection!\n")
+        return False
+    """
+    except FileNotFoundError:
+        print(f"The file {filename} was not found.")
+        return False
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return False"""
 
 while True:
     proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
