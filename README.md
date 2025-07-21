@@ -8,4 +8,3 @@ Voltron is a password strength checker that:
 - educates users on password health
 
 Really though, use MFA and/or passkeys! 🙃
-
