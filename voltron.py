@@ -1,5 +1,6 @@
 import pwinput
 import string
+import time
 
 print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
 
@@ -62,9 +63,13 @@ if __name__ == "__main__":
             print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
             password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
             print(password)  # uncomment for debug only, remove this after testing
+            time.sleep(1)
             analysis_len(password)
+            time.sleep(1)
             analysis_charset(password)
+            time.sleep(1)
             analysis_breach(password)
+            time.sleep(1)
 
             print("\nThanks for using Voltron 💫\n"
             "For more information about good password strategies, you can reference NIST Special \n"
