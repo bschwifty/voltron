@@ -9,7 +9,7 @@ class TestVoltron(unittest.TestCase):
     def setUp(self):
         self.passwords = {
             "short": "short1",
-            "medium": "---exactly----16",
+            "medium": "---Exactly----16",
             "long": "supercalifragilisticexpialadocious",
             "xkcd": "correcthorsebatterystaple",
             "breached": "123456",
@@ -38,7 +38,7 @@ class TestVoltron(unittest.TestCase):
     def test_analysis_len_xkcd(self):
         with patch('builtins.print') as mocked_print:
             password = self.passwords["xkcd"]
-            with self.assertRaises(SystemExit):  # Expecting exit on this password
+            with self.assertRaises(SystemExit):
                 analysis_len(password)
 
     def test_analysis_charset(self):
@@ -50,7 +50,7 @@ class TestVoltron(unittest.TestCase):
 
     def test_analysis_charset_missing_types(self):
         with patch('builtins.print') as mocked_print:
-            password = "abc"  # Only lowercase letters
+            password = "abc"
             analysis_charset(password)
             mocked_print.assert_any_call("Your password uses 1 character types.")
             mocked_print.assert_any_call("Consider adding more character types to your password.")
