@@ -27,12 +27,7 @@ def analysis_charset():
     has_upper = int(any(c.isupper() for c in password))
     has_numbers = int(any(c.isdigit() for c in password))
     has_special = int(any(c in string.punctuation for c in password))
-    # for debug, delete these before finalizing
-    print(has_lower)
-    print(has_upper)
-    print(has_numbers)
-    print(has_special)
-    # TODO add cumulative scoring here
+
     char_score += has_lower
     char_score += has_upper
     char_score += has_numbers
