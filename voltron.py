@@ -43,7 +43,7 @@ def analysis_charset():
     else:
         print("Nice job!\n")
 
-def analysis_breach(password, filename='rockyou-top15k.txt'):
+def analysis_breach(filename='rockyou-top15k.txt'):
     #try:
     with open(filename, 'r', encoding='utf-8') as file:
         passwords = set(line.strip() for line in file)
