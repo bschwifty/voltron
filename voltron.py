@@ -62,7 +62,7 @@ if __name__ == "__main__":
         if proceed == "Y":
             print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
             password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-            print("######")
+            print("\n ...Analyzing your password...\n")
             time.sleep(1.5)
             analysis_len(password)
             time.sleep(1.5)
