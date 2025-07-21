@@ -20,20 +20,29 @@ class TestVoltron(unittest.TestCase):
         with patch('builtins.print') as mocked_print:
             password = self.passwords["short"]
             analysis_len(password)
-            mocked_print.assert_called_with("Your password is shorter than 16 characters long, consider making it longer.")
+            calls = [
+                unittest.mock.call("Your password is shorter than 16 characters long, consider making it longer.")
+            ]
+            mocked_print.assert_has_calls(calls)
 
     def test_analysis_len_medium(self):
         with patch('builtins.print') as mocked_print:
             password = self.passwords["medium"]
             analysis_len(password)
-            mocked_print.assert_any_call("Your password is between 16 and 25 characters long.  Nice work!  However,")
-            mocked_print.assert_any_call("you may be able to make it longer by using a passphrase.")
+            calls = [
+                unittest.mock.call("Your password is between 16 and 25 characters long.  Nice work!  However,"),
+                unittest.mock.call("you may be able to make it longer by using a passphrase.\n")
+            ]
+            mocked_print.assert_has_calls(calls)
 
     def test_analysis_len_long(self):
         with patch('builtins.print') as mocked_print:
             password = self.passwords["long"]
             analysis_len(password)
-            mocked_print.assert_called_with("Your password is more than 25 characters long.  Good to go!")
+            calls = [
+                unittest.mock.call("Your password is more than 25 characters long.  Good to go!")
+            ]
+            mocked_print.assert_has_calls(calls)
 
     def test_analysis_len_xkcd(self):
         with patch('builtins.print') as mocked_print:
@@ -45,15 +54,21 @@ class TestVoltron(unittest.TestCase):
         with patch('builtins.print') as mocked_print:
             password = self.passwords["medium"]
             analysis_charset(password)
-            mocked_print.assert_any_call("Your password uses 4 character types.")
-            mocked_print.assert_any_call("Nice job!")
+            calls = [
+                unittest.mock.call("Your password uses 4 character types."),
+                unittest.mock.call("Nice job!\n")
+            ]
+            mocked_print.assert_has_calls(calls)
 
     def test_analysis_charset_missing_types(self):
         with patch('builtins.print') as mocked_print:
             password = "abc"
             analysis_charset(password)
-            mocked_print.assert_any_call("Your password uses 1 character types.")
-            mocked_print.assert_any_call("Consider adding more character types to your password.")
+            calls = [
+                unittest.mock.call("Your password uses 1 character types."),
+                unittest.mock.call("Consider adding more character types to your password.\n")
+            ]
+            mocked_print.assert_has_calls(calls)
 
     def test_analysis_breach_breached(self):
         with patch('builtins.open', mock_open(read_data='123456\npassword\n12345678\n')) as mocked_file:
