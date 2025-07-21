@@ -62,7 +62,7 @@ if __name__ == "__main__":
         if proceed == "Y":
             print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
             password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-            print(password)  # uncomment for debug only, remove this after testing
+            print("######")
             time.sleep(1.5)
             analysis_len(password)
             time.sleep(1.5)
@@ -70,7 +70,7 @@ if __name__ == "__main__":
             time.sleep(1.5)
             analysis_breach(password)
             time.sleep(1.5)
-            print("\nThanks for using Voltron 💫\n"
+            print("Thanks for using Voltron 💫\n"
             "For more information about good password strategies, you can reference NIST Special \n"
             "Publication 800-63B: https://pages.nist.gov/800-63-3/sp800-63b.html")
 
