@@ -46,7 +46,6 @@ def analysis_charset():
         print("Consider adding more character types to your password.\n")
     else:
         print("Nice job!\n")
-    # TODO add print stmts here to effect of "your pw uses x character types"
 
 '''
     'all_letters = password.isalpha()
