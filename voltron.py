@@ -5,10 +5,12 @@ import time
 print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
 
 def help():
+    """Prints a help message describing the purpose of Voltron."""
     print("Voltron is a command-line utility to analyze the strength of your password.")
     print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
 
 def analysis_len(password):
+    """Analyzes the length of the password."""
     # XKCD check:
     if password == "correcthorsebatterystaple":
         print("That's an excellent password, but everyone else has read XKCD too...\n")
@@ -23,6 +25,7 @@ def analysis_len(password):
         print("Your password is more than 25 characters long.  Good to go!")
 
 def analysis_charset(password):
+    """Analyzes the character set of the password."""
     char_score = 0 # can increment with each class of character
     has_lower = int(any(c.islower() for c in password))
     has_upper = int(any(c.isupper() for c in password))
@@ -40,7 +43,7 @@ def analysis_charset(password):
         print("Nice job!\n")
 
 def analysis_breach(password, filename='rockyou-top15k.txt'):
-    #try:
+    """Analyzes the given password against a list of breached passwords."""
     with open(filename, 'r', encoding='utf-8') as file:
         passwords = set(line.strip() for line in file)
     
