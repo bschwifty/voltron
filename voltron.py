@@ -59,6 +59,7 @@ while True:
         print(password)  # uncomment for debug only, remove this after testing
         analysis_len()
         analysis_charset()
+        analysis_breach()
         break
 
     # Error handling for invalidd input:
