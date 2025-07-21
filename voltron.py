@@ -47,17 +47,6 @@ def analysis_charset():
     else:
         print("Nice job!\n")
 
-'''
-    'all_letters = password.isalpha()
-    if all_letters == True:
-        score = 1
-    all_numbers = password.isdigit()
-    if all_numbers == True:
-        score = 1
-    if score == 1:
-        print("Your password is all one kind of character.  Mix it up a bit for better security.")
-'''
-
 while True:
     proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
