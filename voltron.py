@@ -15,7 +15,7 @@ def analysis_len(password):
         exit()
     # Length checks:
     if len(password) < 16:
-        print("Your password is shorter than 16 characters long, consider making it longer.")
+        print("Your password is shorter than 16 characters long, consider making it longer.\n")
     elif len(password) >= 16 and len(password) < 25:
         print("Your password is between 16 and 25 characters long.  Nice work!  However,")
         print("you may be able to make it longer by using a passphrase.\n")
@@ -63,14 +63,13 @@ if __name__ == "__main__":
             print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
             password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
             print(password)  # uncomment for debug only, remove this after testing
-            time.sleep(1)
+            time.sleep(1.5)
             analysis_len(password)
-            time.sleep(1)
+            time.sleep(1.5)
             analysis_charset(password)
-            time.sleep(1)
+            time.sleep(1.5)
             analysis_breach(password)
-            time.sleep(1)
-
+            time.sleep(1.5)
             print("\nThanks for using Voltron 💫\n"
             "For more information about good password strategies, you can reference NIST Special \n"
             "Publication 800-63B: https://pages.nist.gov/800-63-3/sp800-63b.html")

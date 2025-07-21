@@ -21,7 +21,7 @@ class TestVoltron(unittest.TestCase):
             password = self.passwords["short"]
             analysis_len(password)
             calls = [
-                unittest.mock.call("Your password is shorter than 16 characters long, consider making it longer.")
+                unittest.mock.call("Your password is shorter than 16 characters long, consider making it longer.\n")
             ]
             mocked_print.assert_has_calls(calls)
 
