@@ -65,6 +65,11 @@ if __name__ == "__main__":
             analysis_len(password)
             analysis_charset(password)
             analysis_breach(password)
+
+            print("\nThanks for using Voltron 💫\n"
+            "For more information about good password strategies, you can reference NIST Special \n"
+            "Publication 800-63B: https://pages.nist.gov/800-63-3/sp800-63b.html")
+
             break
 
         # Error handling for invalidd input:
