@@ -49,13 +49,6 @@ def analysis_breach(filename='rockyou-top15k.txt'):
     else:
         print("Your password is not in the top 15,000 breached passwords.  Good selection!\n")
         return False
-    """
-    except FileNotFoundError:
-        print(f"The file {filename} was not found.")
-        return False
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return False"""
 
 if __name__ == "__main__":
     while True:

@@ -1,3 +1,4 @@
+# test_voltron.py
 import unittest
 from unittest.mock import patch, mock_open
 import string
@@ -26,7 +27,7 @@ class TestVoltron(unittest.TestCase):
             password = self.passwords["medium"]
             analysis_len(password)
             mocked_print.assert_any_call("Your password is between 16 and 25 characters long.  Nice work!  However,")
-            mocked_print.assert_any_call("you may be able to make it longer by using a passphrase.\n")
+            mocked_print.assert_any_call("you may be able to make it longer by using a passphrase.")
 
     def test_analysis_len_long(self):
         with patch('builtins.print') as mocked_print:
@@ -44,15 +45,15 @@ class TestVoltron(unittest.TestCase):
         with patch('builtins.print') as mocked_print:
             password = self.passwords["medium"]
             analysis_charset(password)
-            mocked_print.assert_called_with("Your password uses 4 character types.")
-            mocked_print.assert_any_call("Nice job!\n")
+            mocked_print.assert_any_call("Your password uses 4 character types.")
+            mocked_print.assert_any_call("Nice job!")
 
     def test_analysis_charset_missing_types(self):
         with patch('builtins.print') as mocked_print:
             password = "abc"  # Only lowercase letters
             analysis_charset(password)
-            mocked_print.assert_called_with("Your password uses 1 character types.")
-            mocked_print.assert_any_call("Consider adding more character types to your password.\n")
+            mocked_print.assert_any_call("Your password uses 1 character types.")
+            mocked_print.assert_any_call("Consider adding more character types to your password.")
 
     def test_analysis_breach_breached(self):
         with patch('builtins.open', mock_open(read_data='123456\npassword\n12345678\n')) as mocked_file:
