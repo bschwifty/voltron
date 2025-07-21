@@ -1,10 +1,6 @@
 import pwinput
 import string
 
-"""
-- analyze:
-    - check against breach database..? maybe shortened version of rockyou, top 100k or such?
-"""
 print("Welcome to Voltron, the password helper-outer.  How strong is your password?")
 
 def help():
