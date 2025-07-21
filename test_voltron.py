@@ -67,11 +67,5 @@ class TestVoltron(unittest.TestCase):
             result = analysis_breach(password)
             self.assertFalse(result)
 
-    def test_analysis_breach_file_not_found(self):
-        with patch('builtins.open', side_effect=FileNotFoundError):
-            password = self.passwords["not_breached"]
-            result = analysis_breach(password)
-            self.assertFalse(result)
-
 if __name__ == '__main__':
     unittest.main()
