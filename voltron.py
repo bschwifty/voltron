@@ -7,7 +7,7 @@ def help():
     print("Voltron is a command-line utility to analyze the strength of your password.")
     print("Simply type your password in, and Voltron will tell you whether it's a good one or not")
 
-def analysis_len():
+def analysis_len(password):
     # XKCD check:
     if password == "correcthorsebatterystaple":
         print("That's an excellent password, but everyone else has read XKCD too...\n")
@@ -21,7 +21,7 @@ def analysis_len():
     else:
         print("Your password is more than 25 characters long.  Good to go!")
 
-def analysis_charset():
+def analysis_charset(password):
     char_score = 0 # can increment with each class of character
     has_lower = int(any(c.islower() for c in password))
     has_upper = int(any(c.isupper() for c in password))
@@ -57,24 +57,25 @@ def analysis_breach(filename='rockyou-top15k.txt'):
         print(f"An error occurred: {e}")
         return False"""
 
-while True:
-    proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
+if __name__ == "__main__":
+    while True:
+        proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
-    if proceed == "N":
-        print("No problem, have a nice day : )")
-        exit()
+        if proceed == "N":
+            print("No problem, have a nice day : )")
+            exit()
 
-    if proceed == "Y":
-        print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
-        password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
-        print(password)  # uncomment for debug only, remove this after testing
-        analysis_len()
-        analysis_charset()
-        analysis_breach()
-        break
+        if proceed == "Y":
+            print("\nPlease enter your password. We won't save it, but if you are justifiably paranoid,")
+            password = pwinput.pwinput(prompt=' you can put in a similar one for us to analyze instead.\n')
+            print(password)  # uncomment for debug only, remove this after testing
+            analysis_len(password)
+            analysis_charset(password)
+            analysis_breach(password)
+            break
 
-    # Error handling for invalidd input:
-    print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
+        # Error handling for invalidd input:
+        print("Invalid input. Please enter 'Y' for Yes or 'N' for No.")
 
 # TODO: take a look at NIST 800-63B and maybe reference it in help file
 # link to use later: https://pages.nist.gov/800-63-3/sp800-63b.html
