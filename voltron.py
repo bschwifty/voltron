@@ -43,6 +43,9 @@ def analysis_charset():
     else:
         print("Nice job!\n")
 
+def analysis_breach():
+    pass
+
 while True:
     proceed = input("Would you like to check your password now (Y/N)?\n").strip().upper()
 
